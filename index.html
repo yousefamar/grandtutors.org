@@ -11,7 +11,7 @@
 html, body {
 	overflow: none;
 }
-#header {
+header {
 	text-align: center;
 	width: 100%;
 	padding: 10vh 0;
@@ -84,6 +84,9 @@ ul li:before {
 .quote {
 	margin-bottom: 1em;
 }
+footer {
+	text-align: center;
+}
 @media (min-width: 40.0rem) {
 	h1 {
 		font-size: 6em;
@@ -121,139 +124,149 @@ ul li:before {
 	</script>
 	</head>
 	<body>
-		<div id="header">
+		<header>
 			<img id="logo" src="img/logo.svg" alt="Grandtutors logo"/>
 			<h1>Grandtutors</h1>
-		</div>
+		</header>
 
-		<div id="want" class="container">
-			<br></br>
-			<h2>I want to...</h2>
+		<main>
+			<div id="want" class="container">
+				<br></br>
+				<h2>I want to...</h2>
 
-			<div class="row">
-				<div class="column">
-					<button class="large button" onclick="showContent('learn')">Learn</button>
+				<div class="row">
+					<div class="column">
+						<button class="large button" onclick="showContent('learn')">Learn</button>
+					</div>
+					<div class="column">
+						<button class="large button" onclick="showContent('teach')">Teach</button>
+					</div>
 				</div>
-				<div class="column">
-					<button class="large button" onclick="showContent('teach')">Teach</button>
-				</div>
-			</div>
-			<br></br>
-		</div>
-
-		<div id="learn" class="container hidden transparent">
-			<br></br>
-			<h2>I want to learn!</h2>
-			<p>We are a community of skilled tutors here to bring you or your child to the next level. We offer different packages based on your specific needs. We provide pre-planned as well as bespoke lessons in a constantly growing list of areas up to and including undergraduate level.</p>
-
-			<h2>Our subjects</h2>
-			<div class="row">
-				<div class="column">
-					<ul>
-						<li>Maths</li>
-						<li>Chemistry</li>
-						<li>Physics</li>
-						<li>Programming
-							<ul>
-								<li>Software development</li>
-								<li>Web development</li>
-								<li>Mobile app development</li>
-								<li>Embedded devices and electronics</li>
-								<li>Python</li>
-								<li>Java</li>
-								<li>C/C++</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="column">
-					<ul>
-						<li>Languages
-							<ul>
-								<li>German</li>
-								<li>Italian</li>
-							</ul>
-						</li>
-						<li>Music
-							<ul>
-								<li>Guitar</li>
-								<li>Piano</li>
-								<li>Singing</li>
-								<li>Drums</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+				<br></br>
 			</div>
 
-			<h2>Our tutors</h2>
-			<div class="row">
-				<div class="column">
-					<div class="tutorCard">
-						<img class="tutorIcon" src="img/tutor.svg" alt="Tutor icon"/>
-						<h3>Tutor</h3>
-						<hr>
+			<div id="learn" class="container hidden transparent">
+				<br></br>
+				<h2>I want to learn!</h2>
+				<p>We are a community of skilled tutors here to bring you or your child to the next level. We offer different packages based on your specific needs. We provide pre-planned as well as bespoke lessons in a constantly growing list of areas up to and including undergraduate level.</p>
+
+				<h2>Our subjects</h2>
+				<div class="row">
+					<div class="column">
 						<ul>
-							<li>DBS Certified</li>
-							<li>Individual tutoring</li>
-							<li>Adult students</li>
-							<li>Fixed lesson plans</li>
-							<li>Graduate-level qualifications</li>
+							<li>Maths</li>
+							<li>Chemistry</li>
+							<li>Physics</li>
+							<li>Programming
+								<ul>
+									<li>Software development</li>
+									<li>Web development</li>
+									<li>Mobile app development</li>
+									<li>Embedded devices and electronics</li>
+									<li>Python</li>
+									<li>Java</li>
+									<li>C/C++</li>
+								</ul>
+							</li>
 						</ul>
-						<div class="quote">
+					</div>
+					<div class="column">
+						<ul>
+							<li>Languages
+								<ul>
+									<li>German</li>
+									<li>Italian</li>
+								</ul>
+							</li>
+							<li>Music
+								<ul>
+									<li>Guitar</li>
+									<li>Piano</li>
+									<li>Singing</li>
+									<li>Drums</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h2>Our tutors</h2>
+				<div class="row">
+					<div class="column">
+						<div class="tutorCard">
+							<img class="tutorIcon" src="img/tutor.svg" alt="Tutor icon"/>
+							<h3>Tutor</h3>
 							<hr>
-							<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf0qO6HyRLVgmu_yR206gkcn5xh42xFSLG16D7nz3Pnaeuk_A/viewform?usp=pp_url&entry.1043876634=Tutor" target="_blank">Get a quote</a>
+							<ul>
+								<li>DBS Certified</li>
+								<li>Individual tutoring</li>
+								<li>Adult students</li>
+								<li>Fixed lesson plans</li>
+								<li>Graduate-level qualifications</li>
+							</ul>
+							<div class="quote">
+								<hr>
+								<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf0qO6HyRLVgmu_yR206gkcn5xh42xFSLG16D7nz3Pnaeuk_A/viewform?usp=pp_url&entry.1043876634=Tutor" target="_blank">Get a quote</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="tutorCard">
+							<img class="tutorIcon" src="img/grandtutor.svg" alt="Grandtutor icon"/>
+							<h3>Grandtutor</h3>
+							<hr>
+							<ul>
+								<li>DBS Certified</li>
+								<li>Individual/group tutoring</li>
+								<li>Students of all ages</li>
+								<li>Custom lesson plans</li>
+								<li>Postgraduate-level qualifications</li>
+								<li>Teaching experience</li>
+							</ul>
+							<div class="quote">
+								<hr>
+								<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf0qO6HyRLVgmu_yR206gkcn5xh42xFSLG16D7nz3Pnaeuk_A/viewform?usp=pp_url&entry.1043876634=Grandutor" target="_blank">Get a quote</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="tutorCard">
+							<img class="tutorIcon" src="img/greatgrandtutor.svg" alt="Great-grandtutor icon"/>
+							<h3>Great-grandtutor</h3>
+							<hr>
+							<ul>
+								<li>DBS Certified</li>
+								<li>Individual/group tutoring</li>
+								<li>Students of all ages</li>
+								<li>Custom lesson plans</li>
+								<li>Doctoral-level qualifications</li>
+								<li>Teaching experience</li>
+							</ul>
+							<div class="quote">
+								<hr>
+								<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf0qO6HyRLVgmu_yR206gkcn5xh42xFSLG16D7nz3Pnaeuk_A/viewform?usp=pp_url&entry.1043876634=Great-grandtutor" target="_blank">Get a quote</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="column">
-					<div class="tutorCard">
-						<img class="tutorIcon" src="img/grandtutor.svg" alt="Grandtutor icon"/>
-						<h3>Grandtutor</h3>
-						<hr>
-						<ul>
-							<li>DBS Certified</li>
-							<li>Individual/group tutoring</li>
-							<li>Students of all ages</li>
-							<li>Custom lesson plans</li>
-							<li>Postgraduate-level qualifications</li>
-							<li>Teaching experience</li>
-						</ul>
-						<div class="quote">
-							<hr>
-							<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf0qO6HyRLVgmu_yR206gkcn5xh42xFSLG16D7nz3Pnaeuk_A/viewform?usp=pp_url&entry.1043876634=Grandutor" target="_blank">Get a quote</a>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="tutorCard">
-						<img class="tutorIcon" src="img/greatgrandtutor.svg" alt="Great-grandtutor icon"/>
-						<h3>Great-grandtutor</h3>
-						<hr>
-						<ul>
-							<li>DBS Certified</li>
-							<li>Individual/group tutoring</li>
-							<li>Students of all ages</li>
-							<li>Custom lesson plans</li>
-							<li>Doctoral-level qualifications</li>
-							<li>Teaching experience</li>
-						</ul>
-						<div class="quote">
-							<hr>
-							<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf0qO6HyRLVgmu_yR206gkcn5xh42xFSLG16D7nz3Pnaeuk_A/viewform?usp=pp_url&entry.1043876634=Great-grandtutor" target="_blank">Get a quote</a>
-						</div>
-					</div>
-				</div>
+				<br></br>
+
+				<a id="phone" class="large button" href="https://calendly.com/yousefamar/grandtutors-consultation" target="_blank">Book a free phone consultation</a>
 			</div>
-			<br></br>
 
-			<a id="phone" class="large button" href="https://calendly.com/yousefamar/grandtutors-consultation" target="_blank">Book a free phone consultation</a>
-		</div>
+			<div id="teach" class="container hidden transparent">
+				<br></br>
+				<h2>Teach</h2>
+			</div>
+		</main>
 
-		<div id="teach" class="container hidden transparent">
-			<br></br>
-			<h2>Teach</h2>
-		</div>
-
+		<br></br>
+		<footer>
+			<small>
+				<script charset="utf-8">
+					document.write('Copyright &copy; ' + new Date().getFullYear() + ' Grandtutors. All rights reserved.');
+				</script>
+			</small>
+		</footer>
 	</body>
 </html>
