@@ -113,14 +113,34 @@ footer {
 }
 		</style>
 	<script charset="utf-8">
-		function showContent(name) {
-			document.getElementById('want').classList.add('transparent');
-			document.getElementById(name).classList.remove('hidden');
-			setTimeout(() => {
-				document.getElementById('want').classList.add('hidden');
-				document.getElementById(name).classList.remove('transparent');
-			}, 500);
-		}
+		let pages = [ 'learn', 'teach' ];
+		let currentPage;
+		window.addEventListener('DOMContentLoaded', (event) => {
+			let hash  = location.hash.slice(1);
+			if (hash && pages.includes(hash))
+				showPage(hash, true);
+		});
+		let showPage = (page, instant = false) => {
+			document.getElementById(currentPage || 'want').classList.add('transparent');
+			document.getElementById(page || 'want').classList.remove('hidden');
+			// FIXME: Race condition
+			let f = () => {
+				document.getElementById(currentPage || 'want').classList.add('hidden');
+				document.getElementById(page || 'want').classList.remove('transparent');
+				currentPage = page;
+			};
+			if (instant)
+				f();
+			else
+				setTimeout(f, 500);
+		};
+		window.addEventListener('popstate', event => {
+			showPage(event.state !== null ? event.state.name : '');
+		});
+		let showContent = name => {
+			history.pushState({ name }, null, '#' + name);
+			showPage(name);
+		};
 	</script>
 	</head>
 	<body>
